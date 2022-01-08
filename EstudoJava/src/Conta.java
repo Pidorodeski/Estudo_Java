@@ -3,12 +3,12 @@ public class Conta {
 	private int agencia;
 	private int conta;
 	private double saldo;
-	private String titular;
+	Cliente titular;
 
 	public int getAgencia() {
 		return agencia;
 	}
-	
+
 	public void setAgencia(int agencia) {
 		this.agencia = agencia;
 	}
@@ -16,7 +16,7 @@ public class Conta {
 	public int getConta() {
 		return conta;
 	}
-	
+
 	public void setConta(int conta) {
 		this.conta = conta;
 	}
@@ -47,7 +47,6 @@ public class Conta {
 			this.saldo -= valor;
 			System.out.println("Realizado o saque de R$ " + valor + " para o saldo de R$ " + saldoOld + ".");
 			System.out.println("Novo saldo para a conta " + this.conta + " é de R$ " + this.saldo + ".");
-			System.out.println();
 			return true;
 		} else {
 			System.out.println("Sque não realizado, verifique o valor do saque ou o saldo em conta e tente novamente.");
@@ -62,6 +61,15 @@ public class Conta {
 		this.retiraSaldo(valor);
 		deposita.adicionaSaldo(valor);
 		return true;
+	}
+	
+	public void mostraConta() {
+		System.out.println("Nome usuario: "+this.titular.getNome());
+		System.out.println("CPF: "+this.titular.getCpf());
+		System.out.println("Profissao: "+this.titular.getProfissao());
+		System.out.println("Agencia: "+this.agencia+". Conta: "+this.conta+".");
+		System.out.println("Saldo em conta: "+this.saldo);
+		System.out.println();
 	}
 
 }
