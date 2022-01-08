@@ -34,5 +34,9 @@ public class TestaInteracao {
 		
 		contaCristian.mostraConta();
 		contaDaniela.mostraConta();
+		
+		contaDaniela.adicionaSaldo(50000);
+		
+		contaDaniela.mostraConta();
 	}
 }
