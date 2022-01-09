@@ -20,8 +20,9 @@ public class TestaInteracao {
 		enderecoDaniela.setCep("80806-025");
 		enderecoDaniela.setNumero(123);
 
-		cristian.endereco = enderecoCristian;
-		// daniela.endereco = enderecoDaniela;
+		cristian.setEndereco(enderecoCristian);
+		daniela.setEndereco(enderecoDaniela);
+
 		cristian.setNome("Cristian Rocha Pidorodeski");
 		cristian.setCpf("001.001.001-01");
 		cristian.setProfissao("Programador");
@@ -30,8 +31,11 @@ public class TestaInteracao {
 		daniela.setCpf("002.002.002-04");
 		daniela.setProfissao("Programadora");
 
-		contaCristian.titular = cristian;
-		contaDaniela.titular = daniela;
+		// Não finciona mais pois o titular em Conta é privado
+		// contaCristian.titular = cristian;
+		// contaDaniela.titular = daniela;
+		contaCristian.setTitular(cristian);
+		contaDaniela.setTitular(daniela);
 
 		contaCristian.setAgencia(001);
 		contaCristian.setConta(001);
@@ -55,6 +59,14 @@ public class TestaInteracao {
 		contaCristian.adicionaSaldo(200);
 
 		contaDaniela.mostraConta();
+		enderecoDaniela.mostraEndereco();
+
 		contaCristian.mostraConta();
+		enderecoCristian.mostraEndereco();
+
+		System.out.println(contaCristian.getTitular().getNome());
+		contaCristian.getTitular().setProfissao("Analista de Teste");
+		contaCristian.mostraConta();
+
 	}
 }

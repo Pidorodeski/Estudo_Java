@@ -3,7 +3,7 @@ public class Conta {
 	private int agencia;
 	private int conta;
 	private double saldo;
-	Cliente titular;
+	private Cliente titular;
 
 	public int getAgencia() {
 		return agencia;
@@ -22,7 +22,7 @@ public class Conta {
 	}
 
 	public double getSaldo() {
-		return saldo;
+		return this.saldo;
 	}
 
 	public boolean adicionaSaldo(double valor) {
@@ -70,6 +70,14 @@ public class Conta {
 		System.out.println("Agencia: " + this.agencia + ". Conta: " + this.conta + ".");
 		System.out.println("Saldo em conta: " + this.saldo);
 		System.out.println();
+	}
+
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+
+	public Cliente getTitular() {
+		return titular;
 	}
 
 }

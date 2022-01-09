@@ -37,4 +37,12 @@ public class Endereco {
 		this.numero = numero;
 	}
 
+	public void mostraEndereco() {
+		System.out.println(this.getEstado());
+		System.out.println(this.getCidade());
+		System.out.println(this.getCep());
+		System.out.println(this.getNumero());
+		System.out.println();
+	}
+
 }

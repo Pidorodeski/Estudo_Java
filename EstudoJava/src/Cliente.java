@@ -3,7 +3,7 @@ public class Cliente {
 	private String nome;
 	private String cpf;
 	private String profissao;
-	Endereco endereco;
+	private Endereco endereco;
 
 	public String getNome() {
 		return nome;
@@ -29,4 +29,11 @@ public class Cliente {
 		this.profissao = profissao;
 	}
 
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
 }
