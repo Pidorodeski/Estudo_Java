@@ -62,13 +62,13 @@ public class Conta {
 		deposita.adicionaSaldo(valor);
 		return true;
 	}
-	
+
 	public void mostraConta() {
-		System.out.println("Nome usuario: "+this.titular.getNome());
-		System.out.println("CPF: "+this.titular.getCpf());
-		System.out.println("Profissao: "+this.titular.getProfissao());
-		System.out.println("Agencia: "+this.agencia+". Conta: "+this.conta+".");
-		System.out.println("Saldo em conta: "+this.saldo);
+		System.out.println("Nome usuario: " + this.titular.getNome());
+		System.out.println("CPF: " + this.titular.getCpf());
+		System.out.println("Profissao: " + this.titular.getProfissao());
+		System.out.println("Agencia: " + this.agencia + ". Conta: " + this.conta + ".");
+		System.out.println("Saldo em conta: " + this.saldo);
 		System.out.println();
 	}
 
